@@ -14,4 +14,7 @@ h2 { color: #e4d2a1; }
     padding: 1.5rem;
 }
 
-img { border: 6px solid #fff; }
+img {
+    border: 6px solid #fff;
+    max-width: 95%;
+}
