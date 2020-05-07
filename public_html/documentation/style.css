@@ -23,3 +23,9 @@ img {
     border: none;
     max-width: 100%;
 }
+
+.mobile {
+    display: block;
+    margin: auto;
+    max-width: 850px;
+}
