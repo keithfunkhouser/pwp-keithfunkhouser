@@ -18,3 +18,8 @@ img {
     border: 6px solid #fff;
     max-width: 95%;
 }
+
+.wireframe {
+    border: none;
+    max-width: 100%;
+}
