@@ -1,4 +1,18 @@
+/* Global Styles */
 body {
     background: #333;
     color: #fff;
+    font-family: 'Muli', sans-serif;
+}
+
+/* Navigation */
+nav a {
+    color: #fff;
+    font-size: 1.5em;
+}
+nav a:hover { color: #e4d2a1}
+
+nav img {
+    width: 3rem;
+    padding: 0 0 0.3rem 0.8rem;
 }
