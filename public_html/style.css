@@ -11,6 +11,11 @@ h1 {
     line-height: 1;
 }
 
+h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
 h3 {
     color: #e4d2a1;
     font-weight: 200;
@@ -43,4 +48,12 @@ nav img {
     display: flex;
     align-items: center;
     height: 600px;
+}
+
+/* Projects */
+.projects {
+    background: #3a3a3a;
+    border-top: 1px solid #a1e2c7;
+    border-bottom: 1px solid #e4d2a1;
+    padding: 3rem 0;
 }
