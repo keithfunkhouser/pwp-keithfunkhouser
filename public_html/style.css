@@ -23,6 +23,7 @@ h3 {
 
 .container {
     max-width: 1280px;
+    padding: 0 1.5rem;
 }
 
 /* Navigation */
@@ -55,5 +56,10 @@ nav img {
     background: #3a3a3a;
     border-top: 1px solid #a1e2c7;
     border-bottom: 1px solid #e4d2a1;
-    padding: 3rem 0;
+}
+
+/* Skills */
+.skills img {
+    margin: 1.5rem;
+    max-width: 10rem;
 }
