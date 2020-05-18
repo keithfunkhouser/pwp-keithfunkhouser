@@ -60,8 +60,11 @@ nav img {
 
 /* Skills */
 .skills img {
-    margin: 1.5rem;
-    max-height: 10rem;
+    margin: 1.5rem 0;
+    max-height: 9rem;
+}
+@media only screen and (max-width: 480px) {
+    .skills img { max-height: 7.5rem; }
 }
 
 /* Contact Me */
