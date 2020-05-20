@@ -73,3 +73,9 @@ nav img {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
 }
+
+.contact-me img {
+    max-width: 3rem;
+    margin: 0.5rem;
+}
+.contact-me img:hover { opacity: 0.9 }
