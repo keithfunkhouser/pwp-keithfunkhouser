@@ -78,4 +78,32 @@ nav img {
     max-width: 3rem;
     margin: 0.5rem;
 }
-.contact-me img:hover { opacity: 0.9 }
+.contact-me img:hover { opacity: 0.9; }
+
+input, textarea {
+    background: #3a3a3a;
+    border: 1px solid #fff;
+    color: #fff;
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width: 100%;
+}
+input:focus, textarea:focus {
+    border: 1px solid #e4d2a1;
+    outline: none;
+}
+
+::placeholder { color: #fff }
+
+button {
+    background: #3a3a3a;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.3rem 1rem;
+}
+button:hover {
+    border: 1px solid #a1e2c7;
+    color: #a1e2c7;
+}
+button:focus { outline: none; }
