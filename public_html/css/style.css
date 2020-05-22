@@ -50,7 +50,7 @@ nav img {
 * INTRODUCTION
 *****************************/
 .intro {
-    background: url('images/intro-design.svg') no-repeat right;
+    background: url('../images/intro-design.svg') no-repeat right;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -69,6 +69,7 @@ nav img {
 .project-links {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2rem 0 1.5rem;
 }
 
@@ -118,7 +119,7 @@ button {
     background: #3a3a3a;
     border: 1px solid #fff;
     color: #fff;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     padding: 0.3rem 1rem;
 }
 button:hover {
@@ -126,3 +127,11 @@ button:hover {
     color: #a1e2c7;
 }
 button:focus { outline: none; }
+
+input.error, textarea.error {
+    border: 1px solid #ff6e6e;
+}
+div.error {
+    color: #ff6e6e;
+    margin-top: -0.5rem;
+}

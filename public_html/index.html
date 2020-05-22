@@ -9,7 +9,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Keith Funkhouser | Web Developer</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
     <section class="projects py-5">
         <div class="container">
             <div class="row py-5 align-items-center">
-                <div class="col-md-6 pr-md-5">
+                <div class="col-md-6 pr-md-5 order-md-1 order-2">
                     <h2>Projects</h2>
                     <div class="project-links">
                         <h5>Historic Sites</h5>
@@ -41,7 +41,7 @@
                     </div>
                     <p>Social media graphical user interface seed round validation equity vesting period founders. Startup ecosystem responsive web design buzz gamification infographic stock. MVP entrepreneur supply chain seed round founders burn rate ecosystem agile development advisor backing crowdsource conversion sales iPhone. Bandwidth validation twitter responsive web design hackathon buzz sales mass market startup. Graphical user interface sales holy grail gen-z learning curve focus. Gamification termsheet startup user experience client iteration network effects niche market first mover advantage product management creative ownership crowdsource analytics.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 order-md-2 order-1">
                     <img src="images/screens-overlay.svg" alt="Desktop and Mobile Screens">
                 </div>
             </div>
@@ -101,13 +101,14 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <form>
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="5" placeholder="Message"></textarea>
+                    <form id="contact-form" action="http://localhost:4200/apis" method="post">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" rows="5" maxlength="2000" placeholder="Message (2000 characters max)"></textarea>
                         <button type="submit">Send</button>
                     </form>
+                    <div id="output-area"></div>
                 </div>
             </div>
         </div>
@@ -119,10 +120,14 @@
 
 
     <!-- jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- jQuery Form, Validate, Additional Methods, -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" integrity="sha256-F6h55Qw6sweK+t7SiOJX+2bpSAa3b/fnlrVCJvmEj1A=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js" integrity="sha256-0Yg/eibVdKyxkuVo1Qwh0DspoUCHvSbm/oOoYVz32BQ=" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
