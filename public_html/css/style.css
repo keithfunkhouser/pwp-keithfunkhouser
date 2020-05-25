@@ -73,8 +73,8 @@ nav img {
     margin: 2rem 0 1.5rem;
 }
 
-.projects img {
-    width: 100%;
+.liquid-barn, .diy-calculator, .simon-game {
+    display: none;
 }
 
 .screens-overlay {
