@@ -1,3 +1,24 @@
+//Skills Animation
+let controller = new ScrollMagic.Controller()
+
+let skills = gsap.from('.skill', {
+  duration: 0.8,
+  opacity: 0,
+  ease: 'back.out(1)',
+  scale: 0.9,
+  stagger: 0.2
+})
+
+new ScrollMagic.Scene ({
+  triggerElement: '.skills',
+  triggerHook: 0.75,
+  reverse: false
+})
+  .setTween(skills)
+  .addIndicators()
+  .addTo(controller)
+
+
 // Switch Project Descriptions and Image on Project link click
 function switchProject (project) {
   $('.project-link').css('border-bottom', '2px solid #3a3a3a')
@@ -6,6 +27,7 @@ function switchProject (project) {
   $('.project-image').hide()
   $(`.${project}`).show()
 }
+
 
 //Form Validation
 $(document).ready(function () {
