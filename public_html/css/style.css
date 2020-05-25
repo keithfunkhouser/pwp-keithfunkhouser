@@ -73,6 +73,18 @@ nav img {
     margin: 2rem 0 1.5rem;
 }
 
+.project-link {
+    border-bottom: 2px solid #3a3a3a;
+    padding: 8px 0;
+}
+
+.project-link:hover {
+    color: #e4d2a1;
+    cursor: pointer;
+}
+
+#historic-sites { border-bottom: 2px solid #e4d2a1; }
+
 .liquid-barn, .diy-calculator, .simon-game {
     display: none;
 }

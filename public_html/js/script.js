@@ -1,3 +1,12 @@
+// Switch Project Descriptions and Image on Project link click
+function switchProject (project) {
+  $('.project-link').css('border-bottom', '2px solid #3a3a3a')
+  $(`#${project}`).css('border-bottom', '2px solid #e4d2a1')
+  $('.projects p').hide()
+  $('.project-image').hide()
+  $(`.${project}`).show()
+}
+
 //Form Validation
 $(document).ready(function () {
 
