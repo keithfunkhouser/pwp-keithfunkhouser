@@ -15,7 +15,7 @@ new ScrollMagic.Scene ({
   reverse: false
 })
   .setTween(skills)
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller)
 
 

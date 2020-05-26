@@ -111,12 +111,14 @@
                 <div class="col-md-6">
                     <h2>Contact Me</h2>
                     <h3>funkhouserkeith@gmail.com</h3>
-                    <a href="https://github.com/keithfunkhouser" target="_blank" rel="noopener noreferrer">
-                        <img src="images/github-icon.svg" alt="Github Profile">
-                    </a>
-                    <a href="https://www.linkedin.com/in/keithfunkhouser/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/linkedin-icon.svg" alt="LinkedIn Profile">
-                    </a>
+                    <div class="d-md-block d-none">
+                        <a href="https://github.com/keithfunkhouser" target="_blank" rel="noopener noreferrer">
+                            <img src="images/github-icon.svg" alt="Github Profile">
+                        </a>
+                        <a href="https://www.linkedin.com/in/keithfunkhouser/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn Profile">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <form id="contact-form" action="http://localhost:4200/apis" method="post">
@@ -127,6 +129,14 @@
                         <button type="submit">Send</button>
                     </form>
                     <div id="output-area"></div>
+                    <div class="d-md-none text-right">
+                        <a href="https://github.com/keithfunkhouser" target="_blank" rel="noopener noreferrer">
+                            <img src="images/github-icon.svg" alt="Github Profile">
+                        </a>
+                        <a href="https://www.linkedin.com/in/keithfunkhouser/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn Profile">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,9 +157,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js" integrity="sha256-0Yg/eibVdKyxkuVo1Qwh0DspoUCHvSbm/oOoYVz32BQ=" crossorigin="anonymous"></script>
     <!-- GSAP and Scroll Magic -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
