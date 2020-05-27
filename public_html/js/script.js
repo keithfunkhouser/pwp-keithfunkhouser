@@ -69,7 +69,7 @@ $(document).ready(function () {
         success: function (ajaxOutput) {
           $('#output-area').css('display', '')
           $('#output-area').html(ajaxOutput)
-          if ($('.alert-success').length >= 1) {
+          if ($('.success').length >= 1) {
             $('#contact-form')[0].reset()
           }
         }
