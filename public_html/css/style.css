@@ -28,12 +28,18 @@ h3 {
     padding: 0 1.5rem;
 }
 
+@media only screen and (max-width: 480px) {
+    h1 { font-size: 3.5rem; }
+    h3 { font-size: 1.5rem; }
+}
+
 /****************************
 * NAVBAR
 *****************************/
 nav {
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 nav a {
     color: #fff;
@@ -55,6 +61,10 @@ nav img {
     display: flex;
     align-items: center;
     height: 700px;
+}
+
+@media only screen and (max-width: 767px) {
+    .intro { height: 600px; }
 }
 
 /****************************
@@ -115,10 +125,14 @@ nav img {
 }
 
 .contact-me img {
-    max-width: 3rem;
-    margin: 0.5rem;
+    max-width: 2.8rem;
+    margin: 0.6rem 0.3rem;
 }
 .contact-me img:hover { opacity: 0.9; }
+
+@media only screen and (max-width: 480px) {
+    .contact-me img { margin: 0 0.3rem; }
+}
 
 input, textarea {
     background: #3a3a3a;
@@ -140,7 +154,7 @@ button {
     background: #3a3a3a;
     border: 1px solid #fff;
     color: #fff;
-    margin: 1rem 0;
+    margin: 0 0 1rem;
     padding: 0.3rem 1rem;
 }
 button:hover {
@@ -157,5 +171,7 @@ div.error {
     color: #ff6e6e;
     margin-top: -0.5rem;
 }
+
+#message-error { margin-bottom: 1rem; }
 
 .success { color: #a1e2c7; }
