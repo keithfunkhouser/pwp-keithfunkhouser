@@ -19,13 +19,22 @@ new ScrollMagic.Scene ({
   .addTo(controller)
 
 
-// Switch Project Descriptions and Image on Project link click
+// Switch project descriptions, image and link on project name click
 function switchProject (project) {
-  $('.project-link').css('border-bottom', '2px solid #3a3a3a')
+  $('.project-name').css('border-bottom', '2px solid #3a3a3a')
   $(`#${project}`).css('border-bottom', '2px solid #e4d2a1')
   $('.projects p').hide()
   $('.project-image').hide()
   $(`.${project}`).show()
+  if (project === 'historic-sites') {
+    $('#project-link').attr('href', '#')
+  } else if (project === 'liquid-barn') {
+    $('#project-link').attr('href', 'https://www.liquidbarn.com/')
+  } else if (project === 'diy-calculator') {
+    $('#project-link').attr('href', 'https://www.liquidbarn.com/pages/eliquid-calculator')
+  } else if (project === 'simon-game') {
+    $('#project-link').attr('href', '#')
+  }
 }
 
 
