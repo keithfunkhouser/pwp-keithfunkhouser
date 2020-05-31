@@ -1,3 +1,5 @@
+gsap.from('.intro', {duration: 1, opacity: 0})
+
 //Skills Animation
 let controller = new ScrollMagic.Controller()
 
@@ -20,9 +22,12 @@ new ScrollMagic.Scene ({
 
 
 // Switch project descriptions, image and link on project name click
+let selectedProject = 'historic-sites'
+
 function switchProject (project) {
-  $('.project-name').css('border-bottom', '2px solid #3a3a3a')
-  $(`#${project}`).css('border-bottom', '2px solid #e4d2a1')
+  gsap.to(`#${selectedProject} .selector`, {duration: 0.25, width: 0})
+  gsap.to(`#${project} .selector`, {duration: 0.25, width: '100%'})
+  selectedProject = project
   $('.projects p').hide()
   $('.project-image').hide()
   $(`.${project}`).show()

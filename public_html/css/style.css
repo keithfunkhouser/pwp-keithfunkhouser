@@ -29,8 +29,9 @@ p { font-size: 1.1em; }
 }
 
 @media only screen and (max-width: 480px) {
-    h1 { font-size: 3.5rem; }
-    h3 { font-size: 1.5rem; }
+    h1 { font-size: 3.5em; }
+    h3 { font-size: 1.5em; }
+    p { font-size: 1em; }
 }
 
 /****************************
@@ -84,7 +85,6 @@ nav img {
 }
 
 .project-name {
-    border-bottom: 2px solid #3a3a3a;
     padding: 8px 0;
 }
 
@@ -93,7 +93,15 @@ nav img {
     cursor: pointer;
 }
 
-#historic-sites { border-bottom: 2px solid #e4d2a1; }
+.selector {
+    background: #e4d2a1;
+    height: 2px;
+    width: 0;
+}
+
+#historic-sites .selector {
+    width: 100%;
+}
 
 .liquid-barn, .diy-calculator, .simon-game {
     display: none;
