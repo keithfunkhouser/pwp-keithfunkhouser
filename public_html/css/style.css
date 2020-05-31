@@ -107,7 +107,17 @@ nav img {
     display: none;
 }
 
-.screens-overlay {
+.project-image {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.historic-sites.project-image {
+    opacity: 1;
+}
+
+.project-image, .screens-overlay {
     position: absolute;
     left: 0;
 }

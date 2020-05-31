@@ -1,5 +1,3 @@
-gsap.from('.intro', {duration: 1, opacity: 0})
-
 //Skills Animation
 let controller = new ScrollMagic.Controller()
 
@@ -25,12 +23,16 @@ new ScrollMagic.Scene ({
 let selectedProject = 'historic-sites'
 
 function switchProject (project) {
-  gsap.to(`#${selectedProject} .selector`, {duration: 0.25, width: 0})
+  gsap.to(`#${selectedProject} .selector`, {duration: 0.1 , width: 0})
   gsap.to(`#${project} .selector`, {duration: 0.25, width: '100%'})
   selectedProject = project
+
   $('.projects p').hide()
-  $('.project-image').hide()
   $(`.${project}`).show()
+
+  $('.project-image').css('opacity', 0)
+  $(`.${project}.project-image`).css('opacity', 1)
+
   if (project === 'historic-sites') {
     $('#project-link').attr('href', '#')
   } else if (project === 'liquid-barn') {
