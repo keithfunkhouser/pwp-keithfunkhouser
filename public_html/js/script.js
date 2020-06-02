@@ -1,23 +1,13 @@
-//Skills Animation
-let controller = new ScrollMagic.Controller()
-
-let skills = gsap.from('.skill', {
-  duration: 0.8,
-  opacity: 0,
-  ease: 'back.out(1)',
-  scale: 0.9,
-  stagger: 0.2
-})
-
-new ScrollMagic.Scene ({
-  triggerElement: '.skills',
-  triggerHook: 0.75,
-  reverse: false
-})
-  .setTween(skills)
-  //.addIndicators()
-  .addTo(controller)
-
+//Add dark gradient to navbar on smaller screens when scrolled
+if ($(window).width() < 1600) {
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 150) {
+      $('.nav').css('background', 'linear-gradient(0deg, rgba(51,51,51,0) 0%, rgba(51,51,51,0.75) 50%)')
+    } else {
+      $('.nav').css('background', 'transparent')
+    }
+  })
+}
 
 // Switch project descriptions, image and link on project name click
 let selectedProject = 'historic-sites'
@@ -43,6 +33,26 @@ function switchProject (project) {
     $('#project-link').attr('href', '#')
   }
 }
+
+//Skills Animation
+let controller = new ScrollMagic.Controller()
+
+let skills = gsap.from('.skill', {
+  duration: 0.8,
+  opacity: 0,
+  ease: 'back.out(1)',
+  scale: 0.9,
+  stagger: 0.2
+})
+
+new ScrollMagic.Scene ({
+  triggerElement: '.skills',
+  triggerHook: 0.75,
+  reverse: false
+})
+  .setTween(skills)
+  //.addIndicators()
+  .addTo(controller)
 
 
 //Form Validation
