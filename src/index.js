@@ -1,9 +1,9 @@
-require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const mailgun = require('mailgun-js')
 const {check, validationResult} = require('express-validator')
+const Recaptcha = require('express-recaptcha').RecaptchaV2
 
 const app = express()
 
@@ -18,14 +18,19 @@ const validationChecks = [
   check('message', 'message is required').not().isEmpty().isLength({max: 2000}).trim().escape()
 ]
 
+const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY)
+
 const indexRouter = express.Router()
 
 indexRouter.route('/apis')
   .get((req, res) => res.json({status: 200}))
-  .post(validationChecks, (req, res) => {
-    //DELETE ACCESS-CONTROL-ALLOW-ORIGIN BEFORE HOSTING SITE
-    res.append('Access-Control-Allow-Origin', ['*'])
+  .post(recaptcha.middleware.verify, validationChecks, (req, res) => {
+
     res.append('Content-Type', 'text/html')
+
+    if (req.recaptcha.error) {
+      return res.send(Buffer.from(`<div class="error">There was an error with Recaptcha. Please try again later.</div>`))
+    }
 
     const errors = validationResult(req)
 
