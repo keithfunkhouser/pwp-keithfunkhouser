@@ -154,7 +154,7 @@ nav img {
 .contact-me img:hover { opacity: 0.9; }
 
 @media only screen and (max-width: 480px) {
-    .contact-me img { margin: 0 0.3rem; }
+    .contact-me img { margin: 1rem 0.3rem 0; }
 }
 
 input, textarea {
@@ -178,13 +178,18 @@ button {
     border: 1px solid #fff;
     color: #fff;
     margin: 0 0 1rem;
-    padding: 0.3rem 1rem;
+    padding: 0.4rem 1.8rem;
 }
 button:hover {
     border: 1px solid #a1e2c7;
     color: #a1e2c7;
 }
 button:focus { outline: none; }
+
+.g-recaptcha {
+    filter: contrast(0.75);
+    margin-bottom: 1rem;
+}
 
 input.error, textarea.error {
     border: 1px solid #ff6e6e;
@@ -197,4 +202,7 @@ div.error {
 
 #message-error { margin-bottom: 1rem; }
 
-.success { color: #a1e2c7; }
+.success {
+    color: #a1e2c7;
+    margin-bottom: 1rem;
+}

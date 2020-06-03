@@ -12,5 +12,5 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./httpd.conf:/etc/nginx/conf.d/default.conf
+      - ./http.conf:/etc/nginx/conf.d/default.conf
       - ./public_html:/usr/share/nginx/html
