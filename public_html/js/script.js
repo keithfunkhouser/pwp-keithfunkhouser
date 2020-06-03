@@ -9,6 +9,15 @@ if ($(window).width() < 1600) {
   })
 }
 
+//Intro Design Animation
+let animation = bodymovin.loadAnimation({
+  container: document.getElementById('animation'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
+  path: 'animation/data.json'
+})
+
 // Switch project descriptions, image and link on project name click
 let selectedProject = 'historic-sites'
 

@@ -58,11 +58,17 @@ nav img {
 * INTRODUCTION
 *****************************/
 .intro {
-    background: url('../images/intro-design.svg') no-repeat center;
-    background-size: cover;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-design {
+    position: absolute;
+    width: 1920px;
 }
 
 @media only screen and (max-width: 767px) {
