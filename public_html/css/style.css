@@ -66,15 +66,18 @@ nav img {
     overflow: hidden;
 }
 
-.intro-design {
+.design {
     position: absolute;
     width: 1920px;
 }
 
+.mobile-design {
+    position: absolute;
+    width: 700px;
+}
+
 @media only screen and (max-width: 767px) {
     .intro {
-        background: url('../images/intro-design-mobile.svg') no-repeat center;
-        background-size: cover;
         height: 600px;
     }
 }

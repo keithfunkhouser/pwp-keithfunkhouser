@@ -15,7 +15,15 @@ let animation = bodymovin.loadAnimation({
   renderer: 'svg',
   loop: false,
   autoplay: true,
-  path: 'animation/data.json'
+  path: 'animation/intro-design.json'
+})
+
+let mobileAnimation = bodymovin.loadAnimation({
+  container: document.getElementById('mobile-animation'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
+  path: 'animation/intro-mobile-design.json'
 })
 
 // Switch project descriptions, image and link on project name click
