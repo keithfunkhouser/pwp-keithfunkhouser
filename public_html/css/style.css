@@ -43,10 +43,12 @@ nav {
     z-index: 1;
     transition: background 0.25s;
 }
+
 nav a {
     color: #fff;
     font-size: 1.5em;
 }
+
 nav a:hover { color: #e4d2a1; }
 
 nav img {
@@ -66,20 +68,12 @@ nav img {
     overflow: hidden;
 }
 
-.design {
-    position: absolute;
-    width: 1920px;
-}
+.design { width: 1920px; }
 
-.mobile-design {
-    position: absolute;
-    width: 700px;
-}
+.mobile-design { width: 700px; }
 
 @media only screen and (max-width: 767px) {
-    .intro {
-        height: 600px;
-    }
+    .intro { height: 600px; }
 }
 
 /****************************
@@ -99,7 +93,7 @@ nav img {
 }
 
 .project-name {
-    padding: 8px 0;
+    padding: 8px 2px;
 }
 
 .project-name:hover {
@@ -143,6 +137,7 @@ nav img {
     margin: 1.5rem 0;
     max-height: 9rem;
 }
+
 @media only screen and (max-width: 480px) {
     .skills img { max-height: 7.5rem; }
 }
@@ -160,6 +155,7 @@ nav img {
     max-width: 2.8rem;
     margin: 0.6rem 0.3rem;
 }
+
 .contact-me img:hover { opacity: 0.9; }
 
 @media only screen and (max-width: 480px) {
@@ -175,6 +171,7 @@ input, textarea {
     padding: 0.5rem;
     width: 100%;
 }
+
 input:focus, textarea:focus {
     border: 1px solid #e4d2a1;
     outline: none;
@@ -189,10 +186,12 @@ button {
     margin: 0 0 1rem;
     padding: 0.4rem 1.8rem;
 }
+
 button:hover {
     border: 1px solid #a1e2c7;
     color: #a1e2c7;
 }
+
 button:focus { outline: none; }
 
 .g-recaptcha {

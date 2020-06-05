@@ -1,7 +1,10 @@
-//Add dark gradient to navbar on smaller screens when scrolled
+/**
+ * If screen size is smaller than 1600px, this function adds a dark gradient background to the navbar if the page is
+ * scrolled 100px from the top, otherwise it sets the navbar background to transparent.
+ **/
 if ($(window).width() < 1600) {
   $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 150) {
+    if ($(window).scrollTop() > 100) {
       $('.nav').css('background', 'linear-gradient(0deg, rgba(51,51,51,0) 0%, rgba(51,51,51,0.75) 50%)')
     } else {
       $('.nav').css('background', 'transparent')
@@ -9,8 +12,10 @@ if ($(window).width() < 1600) {
   })
 }
 
-//Intro Design Animation
-let animation = bodymovin.loadAnimation({
+/**
+ * On page load, The following Lottie library methods load and play the background svg animations on the intro section
+ **/
+lottie.loadAnimation({
   container: document.getElementById('animation'),
   renderer: 'svg',
   loop: false,
@@ -18,7 +23,7 @@ let animation = bodymovin.loadAnimation({
   path: 'animation/intro-design.json'
 })
 
-let mobileAnimation = bodymovin.loadAnimation({
+lottie.loadAnimation({
   container: document.getElementById('mobile-animation'),
   renderer: 'svg',
   loop: false,
@@ -26,7 +31,16 @@ let mobileAnimation = bodymovin.loadAnimation({
   path: 'animation/intro-mobile-design.json'
 })
 
-// Switch project descriptions, image and link on project name click
+/**
+ * This function switches which project is displayed on the DOM
+ *
+ * On click for a specific project name, this function animates the selector divs associated with the previously selected
+ * project and newly selected project, sets selectedProject to newly selected project, hides all project descriptions,
+ * shows the description of the selected project, sets opacity to 0 for all project images, sets opacity to 1 for the
+ * selected project, and sets the project link href attribute to the url of the selected project.
+ *
+ * @param string $project is the project name matching the id and class names within the DOM
+ **/
 let selectedProject = 'historic-sites'
 
 function switchProject (project) {
@@ -51,7 +65,9 @@ function switchProject (project) {
   }
 }
 
-//Skills Animation
+/**
+ * The following animates my skills to appear when scroll position reaches the skills section.
+ **/
 let controller = new ScrollMagic.Controller()
 
 let skills = gsap.from('.skill', {
@@ -68,11 +84,13 @@ new ScrollMagic.Scene ({
   reverse: false
 })
   .setTween(skills)
-  //.addIndicators()
   .addTo(controller)
 
 
-//Form Validation
+/**
+ * This function provides front-end validation for the contact form.
+ * If all tests set up here pass, the form data is AJAX submitted to the apis/ backend
+ **/
 $(document).ready(function () {
 
   $('#contact-form').validate({
