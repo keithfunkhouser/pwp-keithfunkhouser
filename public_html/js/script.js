@@ -61,7 +61,7 @@ function switchProject (project) {
   } else if (project === 'diy-calculator') {
     $('#project-link').attr('href', 'https://www.liquidbarn.com/pages/eliquid-calculator')
   } else if (project === 'simon-game') {
-    $('#project-link').attr('href', '#')
+    $('#project-link').attr('href', 'https://keithfunkhouser.github.io/simon-game/')
   }
 }
 
