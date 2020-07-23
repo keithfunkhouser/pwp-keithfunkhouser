@@ -55,7 +55,7 @@ function switchProject (project) {
   $(`.${project}.project-image`).css('opacity', 1)
 
   if (project === 'historic-sites') {
-    $('#project-link').attr('href', '#')
+    $('#project-link').attr('href', 'http://historicsites.us/')
   } else if (project === 'liquid-barn') {
     $('#project-link').attr('href', 'https://www.liquidbarn.com/')
   } else if (project === 'diy-calculator') {
