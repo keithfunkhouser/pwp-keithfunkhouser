@@ -89,7 +89,7 @@ nav img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 1.8rem 0 1.2rem;
+    margin: 1.8rem 0 0.9rem;
 }
 
 .project-name {
@@ -128,6 +128,33 @@ nav img {
 .project-image, .screens-overlay {
     position: absolute;
     left: 0;
+}
+
+.project-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-site, .btn-code {
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 48%;
+}
+
+.btn-site:hover {
+    border: 1px solid #e4d2a1;
+    color: #e4d2a1;
+    text-decoration: none;
+}
+
+.btn-code:hover {
+    border: 1px solid #a1e2c7;
+    color: #a1e2c7;
+    text-decoration: none;
 }
 
 /****************************

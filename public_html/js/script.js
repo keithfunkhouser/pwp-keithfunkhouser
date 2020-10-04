@@ -46,10 +46,11 @@ let selectedProject = 'historic-sites'
 function switchProject (project) {
   gsap.to(`#${selectedProject} .selector`, {duration: 0.1 , width: 0})
   gsap.to(`#${project} .selector`, {duration: 0.25, width: '100%'})
-  selectedProject = project
-
-  $('.projects p').hide()
+  
+  $(`.${selectedProject}`).hide()
   $(`.${project}`).show()
+
+  selectedProject = project
 
   $('.project-image').css('opacity', 0)
   $(`.${project}.project-image`).css('opacity', 1)
